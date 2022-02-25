@@ -1,0 +1,178 @@
+html,
+body {
+  font-family: 'Oswald', sans-serif;
+  margin: 0;
+  padding: 0;
+  top: 0;
+}
+h1,
+h2,
+h3 {
+  margin: 0 !important;
+  font-weight: 400;
+}
+input,
+select {
+  display: block;
+  font-size: 15px;
+  color: #212529;
+  border: 1px solid #ced4da;
+  box-shadow: 1px 1px 3px #eaeaea;
+  border-radius: 5px;
+  padding: 8px;
+}
+select {
+  height: 35px;
+}
+input[type='month' i] {
+  height: 17px;
+  padding: 8;
+}
+.container {
+  display: flex;
+  justify-content: center;
+  margin: 15px;
+}
+.header {
+  padding: 30px 60px;
+  background-color: #e9ebef;
+}
+.title {
+  font-weight: 400;
+  font-size: 50px;
+  padding: 5px;
+  color: #212529;
+}
+.sub-title {
+  font-size: 18px;
+  font-weight: 400;
+  padding: 5px;
+  color: #212529;
+}
+.purchases-container {
+  display: grid;
+  flex: 1;
+  border: solid 1px #e1e1e1;
+  transition: 0.5s;
+}
+.data-container {
+  display: grid;
+  flex: 2;
+}
+.purchases-container h2 {
+  padding: 15px;
+  font-size: 30px;
+  color: #212529;
+  font-weight: 400;
+  background-color: #f7f7f7;
+  border-bottom: solid 1px #e1e1e1;
+}
+.purchases {
+  margin: 15px;
+}
+.img-product {
+  width: 100%;
+  margin-bottom: 15px;
+  border: solid 1px #e1e1e1;
+}
+.img-product img {
+  width: 96%;
+  margin: 4px;
+}
+.purchases p {
+  margin: 5px 0 15px 0;
+}
+.data {
+  display: grid;
+  margin-left: 25px;
+  margin-right: 25px;
+}
+.personal-data {
+  display: grid;
+}
+.newsletter {
+  display: flex;
+  align-items: center;
+}
+.newsletter input {
+  width: 14px;
+  margin: 0 10px 0 0;
+}
+.personal-data h3 {
+  font-weight: 100;
+  font-size: 28px;
+  margin-bottom: 20px !important;
+}
+.card-data {
+  margin-top: 20px;
+  display: grid;
+}
+.card-data h3 {
+  font-weight: 100;
+  font-size: 28px;
+  margin-bottom: 20px !important;
+}
+.button-form {
+  padding: 10px;
+  background-color: #005cc8;
+  border: none;
+  color: #ffffff;
+  border-radius: 5px;
+  transition: 0.5s;
+  margin-left: 25px;
+  margin-top: 20px;
+}
+.button-form:hover {
+  background-color: #2e8eff;
+}
+
+@media only screen and (max-width: 767px) {
+  .header {
+    padding: 30px 15px;
+  }
+  .purchases-container {
+    width: 100%;
+    max-width: 400px;
+    margin: auto;
+  }
+  .container {
+    display: grid;
+  }
+  .personal-data {
+    width: 100%;
+    max-width: 400px;
+  }
+  .card-data {
+    width: 100%;
+    max-width: 400px;
+  }
+  .data {
+    width: 100%;
+    max-width: 400px;
+    margin: 15px auto 15px auto;
+  }
+  .button-form {
+    margin: 0;
+  }
+}
+@media only screen and (min-width: 991px) {
+  .data {
+    display: flex;
+    align-items: flex-start;
+  }
+  .personal-data {
+    display: grid;
+    flex: 1;
+    margin-right: 5px;
+  }
+  .card-data {
+    display: grid;
+    flex: 1;
+    margin-left: 5px;
+    margin-top: 0;
+  }
+  .button-form {
+    margin-left: 25px;
+    margin-top: 25px;
+  }
+}
