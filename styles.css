@@ -80,7 +80,7 @@ input[type='month' i] {
   border: solid 1px #e1e1e1;
 }
 .img-product img {
-  width: 96%;
+  width: 97%;
   margin: 4px;
 }
 .purchases p {
@@ -89,7 +89,6 @@ input[type='month' i] {
 .data {
   display: grid;
   margin-left: 25px;
-  margin-right: 25px;
 }
 .personal-data {
   display: grid;

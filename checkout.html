@@ -43,13 +43,13 @@
                         <h3>Dados Pessoais</h3>
 
                         <label for="name">Nome completo:</label>
-                        <input id="name" type="text"></br>
+                        <input id="name" type="text" maxlength="10" required></br>
 
                         <label for="email">Email:</label>
-                        <input id="email" type="email" placeholder="email@exemplo.com"></br>
+                        <input id="email" type="email" placeholder="email@exemplo.com" maxlength="300" required></br>
 
                         <label for="cpf">CPF:</label>
-                        <input id="cpf" type="text" placeholder="000.000.000-00"></br>
+                        <input id="cpf" type="text" placeholder="000.000.000-00" pattern="\d{3}\.?\d{3}\.?\d{3}-?\d{2}" title="Digite o CPF no formato: xxx.xxx.xxx-xx" maxlength="14" required></br>
                         <div class="newsletter">
                             <input id="newsletter" type="checkbox" checked>
                             <label for="newsletter"> Quero receber a newsletter da RCHLO!</label>
@@ -59,10 +59,10 @@
                         <h3>Cartão de crédito</h3>
 
                         <label for="numCard">Número - CVV:</label>
-                        <input id="numCard" type="text"></br>
+                        <input id="numCard" type="text" pattern="[0-9]{3}$" title="O CVV consiste de 3 números" maxlength="3" required></br>
 
                         <label for="flag">Bandeira:</label>
-                        <select name="flag" id="flag">
+                        <select name="flag" id="flag" required>
                             <option value="">Selecione uma opção...</option>
                             <option value="MasterCard">MasterCard</option>
                             <option value="Visa">Visa</option>
@@ -70,7 +70,7 @@
                         </select></br>
 
                         <label for="month">Validade:</label>
-                        <input id="month" type="month">
+                        <input id="month" type="month" required>
                     </div>
                     </br>
 
