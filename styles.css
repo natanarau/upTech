@@ -31,22 +31,26 @@ input[type='month' i] {
 .container {
   display: flex;
   justify-content: center;
-  margin: 15px;
+  margin: 15px 80px;
+}
+.container-header {
+  display: grid;
+  justify-content: start;
+  background-color: #e9ebef;
 }
 .header {
-  padding: 30px 60px;
-  background-color: #e9ebef;
+  margin: 55px 80px;
 }
 .title {
   font-weight: 400;
   font-size: 50px;
-  padding: 5px;
+  padding: 5px 0;
   color: #212529;
 }
 .sub-title {
   font-size: 18px;
   font-weight: 400;
-  padding: 5px;
+  padding: 5px 0;
   color: #212529;
 }
 .purchases-container {
@@ -89,6 +93,7 @@ input[type='month' i] {
 }
 .personal-data {
   display: grid;
+  transition: 0.5s;
 }
 .newsletter {
   display: flex;
@@ -127,8 +132,12 @@ input[type='month' i] {
 }
 
 @media only screen and (max-width: 767px) {
+  .container-header {
+    justify-content: center;
+  }
   .header {
-    padding: 30px 15px;
+    max-width: 400px;
+    margin: 55px 15px;
   }
   .purchases-container {
     width: 100%;
@@ -137,6 +146,12 @@ input[type='month' i] {
   }
   .container {
     display: grid;
+    margin: 15px;
+  }
+  .data {
+    width: 100%;
+    max-width: 400px;
+    margin: 15px auto 15px auto;
   }
   .personal-data {
     width: 100%;
@@ -146,16 +161,11 @@ input[type='month' i] {
     width: 100%;
     max-width: 400px;
   }
-  .data {
-    width: 100%;
-    max-width: 400px;
-    margin: 15px auto 15px auto;
-  }
   .button-form {
     margin: 0;
   }
 }
-@media only screen and (min-width: 991px) {
+@media only screen and (min-width: 992px) {
   .data {
     display: flex;
     align-items: flex-start;
