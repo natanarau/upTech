@@ -20,6 +20,7 @@ select {
   box-shadow: 1px 1px 3px #eaeaea;
   border-radius: 5px;
   padding: 8px;
+  outline-color: #535353;
 }
 select {
   height: 35px;
@@ -56,7 +57,6 @@ input[type='month' i] {
 .purchases-container {
   display: grid;
   flex: 1;
-  border: solid 1px #e1e1e1;
   transition: 0.5s;
 }
 .data-container {
@@ -69,10 +69,12 @@ input[type='month' i] {
   color: #212529;
   font-weight: 400;
   background-color: #f7f7f7;
-  border-bottom: solid 1px #e1e1e1;
+  border: solid 1px #e1e1e1;
 }
 .purchases {
-  margin: 15px;
+  border: solid 1px #e1e1e1;
+  border-top: none;
+  padding: 15px;
 }
 .img-product {
   width: 100%;
@@ -85,6 +87,27 @@ input[type='month' i] {
 }
 .purchases p {
   margin: 5px 0 15px 0;
+}
+.qt-product {
+  display: grid;
+  flex: 1;
+  border: solid 1px #e1e1e1;
+  transition: 0.5s;
+  margin-top: 15px;
+  padding: 15px;
+}
+.qt-product label {
+  margin-bottom: 5px;
+}
+.qt-product p {
+  display: block;
+  font-size: 15px;
+  color: #212529;
+  border: 1px solid #ced4da;
+  box-shadow: 1px 1px 3px #eaeaea;
+  border-radius: 5px;
+  padding: 8px;
+  height: 17px;
 }
 .data {
   display: grid;
@@ -101,6 +124,7 @@ input[type='month' i] {
 .newsletter input {
   width: 14px;
   margin: 0 10px 0 0;
+  cursor: pointer;
 }
 .personal-data h3 {
   font-weight: 100;
@@ -125,9 +149,21 @@ input[type='month' i] {
   transition: 0.5s;
   margin-left: 25px;
   margin-top: 20px;
+  cursor: pointer;
 }
 .button-form:hover {
   background-color: #2e8eff;
+}
+.input {
+  display: grid;
+}
+span.error {
+  font-size: 12px;
+  color: red;
+  padding: 0;
+}
+span.error.active {
+  padding: 0.4em;
 }
 
 @media only screen and (max-width: 767px) {

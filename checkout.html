@@ -32,24 +32,42 @@
                 <p>Branco</p>
                 <b>Tamanho:</b>
                 <p> G</p>
-                <b>Preço: R$</b>
-                <p>R$ 69,90</p>
+                <b>Preço:</b>
+                <p>R$ <span id="unitary">69,90</span></p>
+            </div>
+
+            <div class="qt-product">
+                <label for="qt">Quantidade:</label>
+                <input id="amount" name="amount" type="number" value="1" min="1" max="99"></br>
+                <label for="total">Total:</label>
+                <p>R$ <span id="result"></span></p>
             </div>
         </div>
+
         <div class="data-container">
             <form action="">
                 <div class="data">
                     <div class="personal-data">
                         <h3>Dados Pessoais</h3>
 
-                        <label for="name">Nome completo:</label>
-                        <input id="name" type="text" maxlength="10" required></br>
-
-                        <label for="email">Email:</label>
-                        <input id="email" type="email" placeholder="email@exemplo.com" maxlength="300" required></br>
-
-                        <label for="cpf">CPF:</label>
-                        <input id="cpf" type="text" placeholder="000.000.000-00" pattern="\d{3}\.?\d{3}\.?\d{3}-?\d{2}" title="Digite o CPF no formato: xxx.xxx.xxx-xx" maxlength="14" required></br>
+                        <div class="input">
+                            <label for="name">Nome completo:</label>
+                            <input class="input" id="name" type="text" maxlength="10" required>
+                            <span class="error"></span>
+                        </div>
+                        </br>
+                        <div class="input">
+                            <label for="email">Email:</label>
+                            <input id="email" type="email" placeholder="email@exemplo.com" maxlength="300" required>
+                            <span class="error"></span>
+                        </div>
+                        </br>
+                        <div class="input">
+                            <label for="cpf">CPF:</label>
+                            <input id="cpf" type="text" placeholder="000.000.000-00" pattern="\d{3}\.?\d{3}\.?\d{3}-?\d{2}" title="Digite o CPF no formato: xxx.xxx.xxx-xx" maxlength="14" required>
+                            <span class="error"></span>
+                        </div>
+                        </br>
                         <div class="newsletter">
                             <input id="newsletter" type="checkbox" checked>
                             <label for="newsletter"> Quero receber a newsletter da RCHLO!</label>
@@ -58,27 +76,36 @@
                     <div class="card-data">
                         <h3>Cartão de crédito</h3>
 
-                        <label for="numCard">Número - CVV:</label>
-                        <input id="numCard" type="text" pattern="[0-9]{3}$" title="O CVV consiste de 3 números" maxlength="3" required></br>
-
-                        <label for="flag">Bandeira:</label>
-                        <select name="flag" id="flag" required>
-                            <option value="">Selecione uma opção...</option>
-                            <option value="MasterCard">MasterCard</option>
-                            <option value="Visa">Visa</option>
-                            <option value="American Express">American Express</option>
-                        </select></br>
-
-                        <label for="month">Validade:</label>
-                        <input id="month" type="month" required>
+                        <div class="input">
+                            <label for="numCard">Número - CVV:</label>
+                            <input id="cvv" type="text" pattern="[0-9]{3}$" title="O CVV consiste de 3 números" maxlength="3" required>
+                            <span class="error"></span>
+                        </div>
+                        </br>
+                        <div class="input">
+                            <label for="flag">Bandeira:</label>
+                            <select name="flag" id="flag" required>
+                                <option value="">Selecione uma opção...</option>
+                                <option value="MasterCard">MasterCard</option>
+                                <option value="Visa">Visa</option>
+                                <option value="American Express">American Express</option>
+                            </select>
+                            <span class="error"></span>
+                        </div>
+                        </br>
+                        <div class="input">
+                            <label for="month">Validade:</label>
+                            <input id="month" type="month" required>
+                            <span class="error"></span>
+                        </div>
                     </div>
-                    </br>
-
                 </div>
                 <button class="button-form">Confirmar Pedido</button>
             </form>
         </div>
     </div>
 </body>
+<script src="validate.js" defer></script>
+<script src="functions.js" defer></script>
 
 </html>
