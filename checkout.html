@@ -22,8 +22,8 @@
     <div class="container">
         <!-- Início container de compras -->
         <div class="purchases-container">
-            <h2>Sua compra</h2>
             <div class="purchases">
+                <h2>Sua Compra</h2>
                 <div class="img-product">
                     <img src="https://static.riachuelo.com.br/RCHLO/14247984003/portrait/279d0565feb361cff852a6a792ffdb5c89890ba3.jpg" alt="Riachuelo">
                 </div>
@@ -39,17 +39,23 @@
             </div>
 
             <div class="qt-product">
-                <label for="qt">Quantidade:</label>
-                <input id="amount" name="amount" type="number" value="1" min="1" max="99"></br>
+                <div class="input">
+                    <label for="qt">Quantidade:</label>
+                    <input id="amount" name="amount" type="number" value="1" min="1" max="99" required>
+                    <span class="error"></span>
+                </div>
+                </br>
                 <label for="total">Total:</label>
                 <p>R$ <span id="result"></span></p>
             </div>
         </div>
         <!-- Fim container de compras -->
         <!-- Início container de dados -->
+
         <div class="data-container">
             <form action="">
                 <div class="data">
+                    <!-- Início formulário dados pessoais -->
                     <div class="personal-data">
                         <h3>Dados Pessoais</h3>
 
@@ -76,8 +82,10 @@
                             <label for="newsletter"> Quero receber a newsletter da RCHLO!</label>
                         </div>
                     </div>
+                    <!-- Fim formulário dados pessoais -->
+                    <!-- Início formulário dados do cartão -->
                     <div class="card-data">
-                        <h3>Cartão de crédito</h3>
+                        <h3>Cartão de Crédito</h3>
 
                         <div class="input">
                             <label for="numCard">Número - CVV:</label>
@@ -102,11 +110,15 @@
                             <span class="error"></span>
                         </div>
                     </div>
+                    <!-- Fim formulário dados do cartão -->
                 </div>
                 <button class="button-form">Confirmar Pedido</button>
             </form>
         </div>
         <!-- Fim container de dados -->
+        <div class="alert">
+            <span class="confirmed"></span>
+        </div>
     </div>
     <!-- Fim container Geral -->
 </body>

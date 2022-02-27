@@ -63,27 +63,34 @@ input[type='month' i] {
   display: grid;
   flex: 2;
 }
-.purchases-container h2 {
+.purchases h2 {
+  width: 100%;
+  margin-top: -15px !important;
+  margin-left: -15px !important;
   padding: 15px;
   font-size: 30px;
   color: #212529;
   font-weight: 400;
   background-color: #f7f7f7;
-  border: solid 1px #e1e1e1;
+  border-bottom: solid 1px #e1e1e1;
 }
 .purchases {
   border: solid 1px #e1e1e1;
-  border-top: none;
+  border-radius: 4px;
   padding: 15px;
+  box-shadow: 1px 1px 3px #eaeaea;
 }
 .img-product {
   width: 100%;
   margin-bottom: 15px;
+  margin-top: 15px;
   border: solid 1px #e1e1e1;
+  border-radius: 4px;
 }
 .img-product img {
+  display: block;
   width: 97%;
-  margin: 4px;
+  margin: 5px auto;
 }
 .purchases p {
   margin: 5px 0 15px 0;
@@ -92,9 +99,11 @@ input[type='month' i] {
   display: grid;
   flex: 1;
   border: solid 1px #e1e1e1;
+  border-radius: 4px;
   transition: 0.5s;
   margin-top: 15px;
   padding: 15px;
+  box-shadow: 1px 1px 3px #eaeaea;
 }
 .qt-product label {
   margin-bottom: 5px;
@@ -107,6 +116,7 @@ input[type='month' i] {
   box-shadow: 1px 1px 3px #eaeaea;
   border-radius: 5px;
   padding: 8px;
+  margin: 0;
   height: 17px;
 }
 .data {
@@ -164,6 +174,25 @@ span.error {
 }
 span.error.active {
   padding: 0.4em;
+}
+.alert {
+  position: fixed;
+  top: 0;
+  margin-top: 10px;
+}
+span.confirmed {
+  font-size: 15px;
+  color: #155724;
+}
+span.confirmed.active {
+  display: grid;
+  max-width: 300px;
+  height: 35px;
+  background-color: #d4edda;
+  border-radius: 5px;
+  justify-items: center;
+  padding: 5px 10px;
+  border-color: #c3e6cb;
 }
 
 @media only screen and (max-width: 767px) {
